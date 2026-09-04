@@ -1,0 +1,8 @@
+{
+    "java.jdt.ls.java.home": "C:\\Program Files\\Microsoft\\jdk-21.0.12.101-hotspot",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "terminal.integrated.env.windows": {
+        "JAVA_HOME": "C:\\Program Files\\Microsoft\\jdk-21.0.12.101-hotspot",
+        "Path": "C:\\Program Files\\Microsoft\\jdk-21.0.12.101-hotspot\\bin;${env:Path}"
+    }
+}

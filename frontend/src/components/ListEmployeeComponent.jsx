@@ -14,12 +14,16 @@ class ListEmployeeComponent extends Component {
     }
 
     deleteEmployee(id){
+        if (!window.confirm('Are you sure you want to delete this employee?')) {
+            return;
+        }
         EmployeeService.deleteEmployee(id).then( res => {
             this.setState({employees: this.state.employees.filter(employee => employee.id !== id)});
         });
     }
     viewEmployee(id){
-        this.props.history.push(`/view-employee/${id}`);
+        sessionStorage.setItem('selectedEmployeeId', id);
+        this.props.history.push('/view-employee', { employeeId: id });
     }
     editEmployee(id){
         this.props.history.push(`/add-employee/${id}`);
@@ -38,7 +42,7 @@ class ListEmployeeComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Employees List</h2>
+                 <h2 className="text-center employee-list-title">Employees List</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addEmployee}> Add Employee</button>
                  </div>
@@ -48,9 +52,9 @@ class ListEmployeeComponent extends Component {
 
                             <thead>
                                 <tr>
-                                    <th> Employee First Name</th>
-                                    <th> Employee Last Name</th>
-                                    <th> Employee Email Id</th>
+                                    <th> First Name</th>
+                                    <th> Last Name</th>
+                                    <th> Email</th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>

@@ -75,7 +75,7 @@ class CreateEmployeeComponent extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="employee-form-page">
                 <br></br>
                    <div className = "container">
                         <div className = "row">

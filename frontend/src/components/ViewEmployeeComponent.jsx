@@ -6,7 +6,8 @@ class ViewEmployeeComponent extends Component {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
+            id: (this.props.location.state && this.props.location.state.employeeId)
+                || sessionStorage.getItem('selectedEmployeeId'),
             employee: {}
         }
     }
@@ -19,25 +20,30 @@ class ViewEmployeeComponent extends Component {
 
     render() {
         return (
-            <div>
-                <br></br>
-                <div className = "card col-md-6 offset-md-3">
-                    <h3 className = "text-center"> View Employee Details</h3>
-                    <div className = "card-body">
-                        <div className = "row">
-                            <label> Employee First Name: </label>
-                            <div> { this.state.employee.firstName }</div>
-                        </div>
-                        <div className = "row">
-                            <label> Employee Last Name: </label>
-                            <div> { this.state.employee.lastName }</div>
-                        </div>
-                        <div className = "row">
-                            <label> Employee Email ID: </label>
-                            <div> { this.state.employee.emailId }</div>
-                        </div>
+            <div className="employee-view-page">
+                <button className="btn btn-secondary employee-back-button" onClick={() => this.props.history.push('/employees')}>
+                    Back
+                </button>
+                <div className="card employee-details-card">
+                    <h3 className="text-center employee-details-title">Employee Details</h3>
+                    <div className="card-body">
+                        <table className="table table-bordered employee-details-table">
+                            <tbody>
+                                <tr>
+                                    <th>First Name</th>
+                                    <td>{this.state.employee.firstName}</td>
+                                </tr>
+                                <tr>
+                                    <th>Last Name</th>
+                                    <td>{this.state.employee.lastName}</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>{this.state.employee.emailId}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
                 </div>
             </div>
         )

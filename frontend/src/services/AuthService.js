@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const AUTH_API_BASE_URL = 'http://localhost:8080/api/v1/auth';
+// const AUTH_API_BASE_URL = 'http://localhost:8080/api/v1/auth';
+const AUTH_API_BASE_URL = 'https://aiagentlearn-production.up.railway.app/api/v1/auth';
 
 class AuthService {
     login(credentials) {

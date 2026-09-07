@@ -21,10 +21,10 @@ import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.repository.EmployeeRepository;
 
 // @CrossOrigin(origins = "http://localhost:3000")
-@CrossOrigin(origins = {
-    "http://localhost:3000",
-    "https://frontendno1.up.railway.app"
-})
+// @CrossOrigin(origins = {
+//     "http://localhost:3000",
+//     "https://frontendno1.up.railway.app"
+// })
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {

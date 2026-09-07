@@ -16,7 +16,7 @@
 //                 registry.addMapping("/**")
 //                         .allowedOrigins(
 //                                 "http://localhost:3000",
-//                                 "https://soothing-fascination-production-47c8.up.railway.app"
+//                                 "https://frontendno1.up.railway.app"
 //                         )
 //                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 //                         .allowedHeaders("*")
@@ -46,7 +46,7 @@ public class WebConfig {
         
         // 2. 設置精確的前端 Origin（結尾絕對不可有斜線 /）
         config.addAllowedOrigin("http://localhost:3000");
-        config.addAllowedOrigin("https://railway.app");
+        config.addAllowedOrigin("https://frontendno1.up.railway.app");
         
         // 3. 允許所有 Header 標頭
         config.addAllowedHeader("*");

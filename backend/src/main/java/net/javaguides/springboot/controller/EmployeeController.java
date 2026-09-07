@@ -23,7 +23,7 @@ import net.javaguides.springboot.repository.EmployeeRepository;
 // @CrossOrigin(origins = "http://localhost:3000")
 @CrossOrigin(origins = {
     "http://localhost:3000",
-    "https://soothing-fascination-production-47c8.up.railway.app"
+    "https://frontendno1.up.railway.app"
 })
 @RestController
 @RequestMapping("/api/v1/")

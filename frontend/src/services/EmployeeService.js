@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees";
-const EMPLOYEE_API_BASE_URL = "https://aiagentlearn-production.up.railway.app/api/v1/employees";
+const EMPLOYEE_API_BASE_URL = "https://backendno1.up.railway.app/api/v1/employees";
 
 class EmployeeService {
 

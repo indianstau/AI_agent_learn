@@ -19,8 +19,7 @@ public class WebConfig {
                                 "https://soothing-fascination-production-47c8.up.railway.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowedHeaders("*");
             }
         };
     }

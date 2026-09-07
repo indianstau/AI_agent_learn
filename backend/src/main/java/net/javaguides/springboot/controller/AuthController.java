@@ -17,7 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import net.javaguides.springboot.model.User;
 import net.javaguides.springboot.repository.UserRepository;
 
-@CrossOrigin(origins = "http://localhost:3000")
+// @CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://soothing-fascination-production-47c8.up.railway.app"
+})
 @RestController
 @RequestMapping("/api/v1/auth")
 public class AuthController {

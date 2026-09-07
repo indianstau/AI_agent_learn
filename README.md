@@ -20,4 +20,6 @@ npm run build
 .\mvnw spring-boot:run  
 
 目的  AI agent +  系統  前後端 DB 
-部署  上去  從線上下指令   兩個 agent code 跟審核
+部署  上去  從線上下指令   兩個 agent code 跟審核  
+
+免費[railway](https://railway.com/p)  
